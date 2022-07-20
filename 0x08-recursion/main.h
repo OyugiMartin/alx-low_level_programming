@@ -1,5 +1,5 @@
 /**
- * File contains all functions used
+ * This is a header file that contains a list of functions used
  */
 
 #ifndef MAIN_H
@@ -10,4 +10,4 @@
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
 
-#endif
+#endif /*MAIN_H*/
