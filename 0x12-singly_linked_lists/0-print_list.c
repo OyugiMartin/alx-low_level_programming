@@ -1,8 +1,3 @@
-/*
- * prints all elements of a list_t file
- * Author Martin Oyugi
- */
-
 #include "lists.h"
 #include <stdio.h>
 
@@ -14,14 +9,17 @@
  */
 size_t print_list(const list_t *h);
 {
-	size_t nodes = 0;
+	size_t n = 0;
 
 	while (h)
 	{
-		nodes++;
-		printf("%d\n", h->n);
+		if (!h->str)
+			printf("[0] (nil)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
 		h = h->next;
+		n++;
 	}
 
-	return (nodes);
+	return (n);
 }
